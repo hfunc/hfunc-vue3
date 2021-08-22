@@ -3,8 +3,8 @@
 </script>
 
 <template lang="pug">
-h1 test
-  h-template
+h1 Demo
+  h-template(:title="'App Hello'" :data="{name:' HfuncVue3'}")
 </template>
 
 <style lang="stylus" scoped>

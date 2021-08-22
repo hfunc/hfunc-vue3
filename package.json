@@ -8,7 +8,7 @@
   "main": "./lib/index.umd.js",
   "module": "./lib/index.es.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "yarn run build && vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview"
   },

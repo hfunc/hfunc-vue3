@@ -15,14 +15,14 @@ export default defineConfig({
         }
     },
     optimizeDeps: {
-        entries: ["./index.html", "./packages/index.ts"]
+        entries: ["./index.html", "./components/index.ts"]
     },
     build: {
         outDir: abPath("lib"),
         assetsDir: abPath("lib/assets"),
         target: "modules",
         lib: {
-            entry: abPath("packages/index.ts"),
+            entry: abPath("components/index.ts"),
             name: "hfunc-vue3",
             fileName: "index",
             formats: ["es", "umd"],
@@ -32,9 +32,13 @@ export default defineConfig({
     resolve: {
         alias: [
             {
+                find: "@hfunc-vue3/index.css",
+                replacement: abPath("./lib/index.css")
+            },
+            {
                 find: "@hfunc-vue3",
                 replacement: abPath("./lib/index.es.js")
-            }
+            },
         ]
     }
 })
