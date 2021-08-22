@@ -2,8 +2,14 @@
   "name": "hfunc-vue3",
   "version": "0.0.1",
   "license": "MIT",
+  "author": {
+    "name": "hfunc",
+    "email": "nieaowei@gmail.com"
+  },
   "files": [
-    "lib"
+    "lib",
+    "es",
+    "components"
   ],
   "main": "./lib/index.umd.js",
   "module": "./lib/index.es.js",

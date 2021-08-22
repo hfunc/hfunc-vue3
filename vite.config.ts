@@ -17,7 +17,13 @@ export default defineConfig({
     optimizeDeps: {
         entries: ["./index.html", "./components/index.ts"]
     },
+    esbuild: {},
     build: {
+        rollupOptions: {
+            output: {
+                exports: "named"
+            },
+        },
         outDir: abPath("lib"),
         assetsDir: abPath("lib/assets"),
         target: "modules",
@@ -32,13 +38,14 @@ export default defineConfig({
     resolve: {
         alias: [
             {
-                find: "@hfunc-vue3/index.css",
+                find: "hfunc-vue3/index.css",
                 replacement: abPath("./lib/index.css")
             },
             {
-                find: "@hfunc-vue3",
+                find: "hfunc-vue3",
                 replacement: abPath("./lib/index.es.js")
             },
         ]
-    }
+    },
+    define: {}
 })
