@@ -8,7 +8,9 @@ const abPath = (path: string) => {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [vue()],
+    plugins: [
+        vue(),
+    ],
     server: {
         fs: {
             allow: [abPath(".")]
@@ -31,7 +33,7 @@ export default defineConfig({
             entry: abPath("components/index.ts"),
             name: "hfunc-vue3",
             fileName: "index",
-            formats: ["es", "umd"],
+            formats: ["es"],
         },
         cssCodeSplit: true
     },

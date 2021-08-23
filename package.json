@@ -16,6 +16,7 @@
   "scripts": {
     "dev": "yarn run build && vite",
     "build": "vue-tsc --noEmit && vite build",
+    "build:types": "vue-dts-gen components",
     "serve": "vite preview"
   },
   "dependencies": {

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {defineProps, ref} from "vue";
+import {defineProps} from "vue";
 
 const props = defineProps({
   title: {
